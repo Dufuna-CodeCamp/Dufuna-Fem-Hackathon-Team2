@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat'; 
+    background: #E5E5E5;
+}
+
+.left-column .input {
+    border:solid 1px;
+    width: 400px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 0px 4px;
+    position: relative;
+    left: 272px;
+    top: 29px;
+    outline: none;
+}
+.left-column .search-icon {
+    position: relative;
+     top: 2.2em;
+     right:7em;
+} 
+.left-column .vector {
+    position: relative;
+    left: 12.5em;
+    top: 2.2em;
+} 
+ ::placeholder {
+position: relative;
+left:3.5em;
+top: 0.2em;
+}
+
+.right-column {
+    display: flex;
+    float: right;
+    justify-content: space-between;
+    width: 10%;
+    align-items: center;
+    position: relative;
+    bottom:1.3em;
+    margin-right:40px;
+}
+
+.side {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width:250px;
+    height: 100%;
+    background-color: white; 
+    overflow: scroll;
+
+}
+.side-bar{
+    margin-top: 60px;
+}
+.side-bar a{
+    color: #606060;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding-left: 40px;
+    transition:0.6s ease;
+    transition-property: background;
+    font-weight: 500;
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0px 0px 40px;
+}
+.side-bar a:hover {
+    background: #0053FF;
+    color: white;
+}
+.side-bar img{
+    padding-right: 10px;
+}
+.side-col-2 {
+    margin-top: 30px;
+   padding-bottom: 9px;
+}
+h3 {
+    margin-top: 48px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 15px;
+    color: #00297D;
+    margin-left: 46px;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: transparent !important;
+}
+::-webkit-scrollbar-thumb{
+    background: #bbbbbb;
+    border-radius: 10px;
+}
