@@ -9,16 +9,14 @@ body{
 }
 
 .left-column .input {
-    border:solid 1px;
+    border:none;
     width: 400px;
     border-radius: 15px;
     padding: 15px;
-    box-shadow: 0px 0px 6px;
+    box-shadow: 0 4px 10px 0 #a0a0a0;
     outline: none;
-    background-color: white;
     margin-top:30px;
     margin-left: 272px;;
-    outline: none;
 }
 .left-column .search-icon {
     position: relative;
@@ -37,7 +35,6 @@ top: 0.2em;
 }
 
 .right-column {
-    /* position:absolute; */
     display: flex;
     float: right;
     justify-content: space-between;
@@ -50,7 +47,7 @@ top: 0.2em;
 span {
     float: right;
     position: relative;
-    top: 0.1em;
+    top: 0em;
     left:8.5em;
 }
 .side {
@@ -109,7 +106,7 @@ h3 {
     margin-left: 46px;
 }
 ::-webkit-scrollbar{
-    width: 5px;
+    width: 7px;
 }
 ::-webkit-scrollbar-track{
     background: transparent !important;
@@ -121,14 +118,13 @@ h3 {
 
 .main-content {
     margin-left: 280px;
-    /* padding: 40px 50px 50px 250px; */
     overflow-y: scroll;
     width: 77%;
 }
 .button-group{
     display: flex;
     justify-content: space-between;
-    margin-top:50px;
+    margin-top:35px;
     align-items: center;
 }
 .button{
@@ -136,7 +132,9 @@ h3 {
     text-decoration:none;
     border-radius: 8px;;
 }
-
+.button-group .left{
+    margin-top:11px;
+}
 .button-group #export{
     width: 119px;
     height: 46px;
@@ -148,9 +146,7 @@ h3 {
 .button-group #export img{
     margin-right: 10px;
     margin-left: 0px;
-    /* vertical-align: middle; */
     vertical-align: top;
-    /* margin-top: 10px; */
 }
 .button-group #import{
     width: 184px;
@@ -162,7 +158,6 @@ h3 {
 .button-group #import img{
     margin-right: 10px;
     margin-left: 0px;
-    /* vertical-align: middle; */
     vertical-align: top;
 }
 .button-group #delete {
@@ -184,25 +179,24 @@ h3 {
 .button-group #add img{
     margin-right: 7px;
     margin-left: 0px;
-    /* vertical-align: middle; */
     vertical-align: top;
-    /* margin-top: 5px; */
 }
 
 .main-content .inventory-table{
-        margin: 85px 0px 30px;
-        box-shadow: 9px 1px 9px;
-        background-color: white;     
+        margin: 35px 0px 30px;
+        box-shadow: 0px 4px 10px #E8E8E8;
+        background-color: white;   
+        border-radius: 8px;  
+        border: none;
 }
 table{
     width: 100%;
-    /* border-collapse: collapse; */
     font-size: 16px;
-    
+    border-collapse: collapse;
 }
 th, td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #C4C4C4;
     font-size: 16px;
     line-height: 20px;
@@ -217,4 +211,55 @@ td {
 th{
     line-height: 30px;
     font-weight: 700;
+}
+
+.table-footer{
+    margin-top:15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 0;
+}
+.table-footer span{
+    margin-bottom: 35px;
+    color: #FF0000;
+    margin-right:20px;
+    letter-spacing: 0.02em;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+}
+.table-footer-link a{
+    text-decoration: none;
+    color: #0053FF;
+    margin-right: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+}
+.table-footer-link{
+    width: 13rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.table-footer-link a img {
+    border: 0.5px solid #0053FF;
+    background: #EBEDF4;
+    padding: 5px 5px;
+    border-radius: 5px;
+    width: 24px;
+    height:24px;
+    vertical-align: bottom;
+}
+
+.red-background{
+    background-color:#FCECEC;
 }
