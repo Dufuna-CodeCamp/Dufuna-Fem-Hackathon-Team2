@@ -48,9 +48,46 @@
             </div>
     </section>
     <section class="main-content">
-            <div class="header">
-                <button type="submit"><img src="../Assets/export.png">Export</button>
-                <p>hello</p>
+            <div class="button-group">
+                    <div class="left">
+                        <a href="#" class="button" id="export"><img src="../Assets/export.png">Export</a>
+                        <a href="#" class="button" id="import"><img src="../Assets/import.png">Import from CSV</a>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="button" id="delete">Delete</a>
+                        <a href="#" class="Add-product" id="add"><img src="../Assets/codicon_add.png">Add Product</a>
+                    </div>
+            </div>
+            <div class="inventory-table">
+                <!-- <h2 class="title">Inventory</h2> -->
+                <table>
+                    <thead>
+                        <th>SN</th>
+                        <th>Inventory Name</th>
+                        <th>AMT/UNIT(N)</th>
+                        <th>SIZE(KG)</th>
+                        <th>QUANTITY</th>
+                        <th>STATUS</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Dangote</td>
+                            <td>10,000</td>
+                            <td>50</td>
+                            <td>2</td>
+                            <td>In-Stock</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Honeywell</td>
+                            <td>20,000</td>
+                            <td>80</td>
+                            <td>2</td>
+                            <td>Out-of-Stock</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
     </section>
     </body>

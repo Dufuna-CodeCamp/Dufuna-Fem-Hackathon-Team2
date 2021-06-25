@@ -51,7 +51,7 @@ span {
     float: right;
     position: relative;
     top: 0.1em;
-    left:10em;
+    left:8.5em;
 }
 .side {
     position: fixed;
@@ -119,7 +119,102 @@ h3 {
     border-radius: 10px;
 }
 
+.main-content {
+    margin-left: 280px;
+    /* padding: 40px 50px 50px 250px; */
+    overflow-y: scroll;
+    width: 77%;
+}
+.button-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top:50px;
+    align-items: center;
+}
+.button{
+    background-color: #EFF4FD;
+    text-decoration:none;
+    border-radius: 8px;;
+}
 
-.header {
-    background: red;
+.button-group #export{
+    width: 119px;
+    height: 46px;
+    padding: 10px 15px;
+    border: 1px solid #EFF4FD;
+    align-items: center;
+    margin-right: 13px;
+}
+.button-group #export img{
+    margin-right: 10px;
+    margin-left: 0px;
+    /* vertical-align: middle; */
+    vertical-align: top;
+    /* margin-top: 10px; */
+}
+.button-group #import{
+    width: 184px;
+    height: 46px;
+    padding: 10px 15px;
+    border: 1px solid #EFF4FD;
+    align-items: center;
+}
+.button-group #import img{
+    margin-right: 10px;
+    margin-left: 0px;
+    /* vertical-align: middle; */
+    vertical-align: top;
+}
+.button-group #delete {
+    width: 108px;
+    height: 43px;
+    padding: 10px 25px;
+    border: 1px solid #5C84D7;
+}
+.button-group #add{
+    border: 1px solid #0053FF;
+    width: 174px;
+    height: 41px;
+    background-color: #0053FF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+.button-group #add img{
+    margin-right: 7px;
+    margin-left: 0px;
+    /* vertical-align: middle; */
+    vertical-align: top;
+    /* margin-top: 5px; */
+}
+
+.main-content .inventory-table{
+        margin: 85px 0px 30px;
+        box-shadow: 9px 1px 9px;
+        background-color: white;     
+}
+table{
+    width: 100%;
+    /* border-collapse: collapse; */
+    font-size: 16px;
+    
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #C4C4C4;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303030;
+    font-weight: 500;
+}
+td {
+    line-height: 20px;
+    color: #303030;
+    font-weight: 500;
+}
+th{
+    line-height: 30px;
+    font-weight: 700;
 }
