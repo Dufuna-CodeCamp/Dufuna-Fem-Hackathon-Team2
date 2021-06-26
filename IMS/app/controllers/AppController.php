@@ -82,6 +82,14 @@ class AppController
 
         $createdBy = 1;
 
+        $id = $data['product'];
+        $product = Inventory::find($id);
+
+        if ($product) {
+            $product->quantity = ($product['quantity'] + $data['quantity']);
+            $product->save();
+        }
+
         $purchase = Purchase::create([
             'product' => $data['product'],
             'product_price' => $data['product_price'],
@@ -105,6 +113,26 @@ class AppController
         $createdAt = date('Y-m-d H:i:s');
 
         $createdBy = 1;
+
+        $id = $data['product'];
+        $product = Inventory::find($id);
+
+        if (!$product) {
+            $response->getBody()->write(json_encode([ 
+                'error' => 'Sorry, this product is not available. Try another product.' 
+            ]));
+            return $response->withHeader(Constants::CONTENT_TYPE_HEADER, Constants::APPLICATION_JSON)->withStatus(404);
+        }
+
+        if ($data['quantity'] > $product['quantity']) {
+            $response->getBody()->write(json_encode([ 
+                'error' => 'Sorry, the number of products you want is more than what is available in stock.' 
+            ]));
+            return $response->withHeader(Constants::CONTENT_TYPE_HEADER, Constants::APPLICATION_JSON)->withStatus(404);
+        }
+
+        $product->quantity = $product['quantity'] - $data['quantity'];
+        $product->save();
 
         $sale = Sale::create([
             'product' => $data['product'],
